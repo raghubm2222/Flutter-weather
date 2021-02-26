@@ -51,7 +51,7 @@ class _HomepageState extends State<Homepage> {
     var latitude = position.latitude;
     var longitude = position.longitude;
     var data = await http.read(
-        'https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=3cb72a591f6387693e456a2e95d80261');
+        'https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid={$your openweather API KEY}');
     final jsonData = jsonDecode(data);
     setState(() {
       main = jsonData['weather'][0]['main'];
